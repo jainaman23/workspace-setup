@@ -1,0 +1,38 @@
+{
+  "name": "workspace-setup",
+  "version": "1.0.5",
+  "description": "Setup oranized flow for your workspace",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js",
+    "commit": "cz",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "bin": {
+    "ws": "./bin/ws.js"
+  },
+  "preferGlobal": true,
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-spinner": "^0.2.10",
+    "inquirer": "^8.1.5",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1"
+  }
+}
