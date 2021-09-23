@@ -1,6 +1,6 @@
 {
   "name": "workspace-setup",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Setup oranized flow for your workspace",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "commit": "cz",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "release": "standard-version"
+    "release": "standard-version --dry-run"
   },
   "bin": {
     "ws": "./bin/ws.js"

@@ -22,12 +22,14 @@ module.exports.HUSKY_INSTALL_CMD = "npm run prepare";
 module.exports.COMMITZEN_CMD =
   "npm install --save-dev commitizen cz-conventional-changelog @commitlint/config-conventional @commitlint/cli";
 module.exports.HUSKY_CMD = "npm install husky lint-staged --save-dev";
+module.exports.SV_CMD = "npm install standard-version --save-dev";
 module.exports.HUSKY_CMD_PRE_COMMIT =
   'npx husky add .husky/pre-commit "npm run pre-commit"';
 module.exports.HUSKY_CMD_COMMIT_MESSAGE =
   'npx husky add .husky/commit-msg "./node_modules/.bin/commitlint -e"';
 module.exports.HUSKY_CMD_PREPARE_COMMIT_MSG =
   'npx husky add .husky/prepare-commit-msg "exec < /dev/tty && git cz --hook || true"';
+module.exports.SET_SCRIPT_COMMIT = { label: "commit", command: "cz" };
 module.exports.SET_SCRIPT_PREPARE = {
   label: "prepare",
   command: "husky install",
@@ -40,7 +42,10 @@ module.exports.SET_SCRIPT_ESLINT = {
   label: "lint",
   command: "eslint src/**/*.js",
 };
-module.exports.SET_SCRIPT_COMMIT = { label: "commit", command: "cz" };
+module.exports.SET_SCRIPT_RELEASE = {
+  label: "release",
+  command: "standard-version --dry-run",
+};
 module.exports.SET_SCRIPT_LINTSTAGE = {
   label: "pre-commit",
   command: "lint-staged",
