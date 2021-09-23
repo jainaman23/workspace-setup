@@ -1,6 +1,6 @@
 {
   "name": "workspace-setup",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Setup oranized flow for your workspace",
   "main": "index.js",
   "scripts": {
@@ -16,12 +16,11 @@
   },
   "preferGlobal": true,
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
     "cli-spinner": "^0.2.10",
-    "inquirer": "^8.1.5",
-    "shelljs": "^0.8.4"
+    "inquirer": "^8.1.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
